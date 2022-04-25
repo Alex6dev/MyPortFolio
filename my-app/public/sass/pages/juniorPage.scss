@@ -1,0 +1,51 @@
+// contenu unique
+
+.JuniorContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.JuniorContainerCloud{
+    position: absolute;
+    width: 100%;
+}
+.fa-cloud{
+    color: gray;
+    font-size: 8rem;
+    animation: moveCloud 20s ease infinite;
+
+}
+.CloudFirst{
+    top:0;
+    left: -20rem;
+}
+.CloudTwo{
+    top: 50rem;
+    left: 100rem;
+}
+.JuniorContainerContent{
+    background-color: $clr-primaire;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+.JuniorContainerContent::before{
+    content: "";
+    background-color: $clr-secondaire;
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform: rotate(-10deg);
+    animation: rotateSimple 1.5s ease-in-out 
+}
+.JuniorImg{
+    transform: rotate(-5deg);
+    animation: plane 5s ease-in-out infinite alternate;
+}

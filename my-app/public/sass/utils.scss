@@ -1,0 +1,89 @@
+// variable, fonction, mixins
+
+$clr-primaire: #91CC92;
+$clr-secondaire: #ADCC91;
+$clr-tertiaire: #F2EB8D;
+$clr-flash: #F67095;
+
+@keyframes rotateSimple{
+    0%{
+        transform:rotate(0);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+
+}
+
+@keyframes plane{
+    0%{
+        transform:rotate(5deg);
+    }
+    100%{
+        transform: rotate(-5deg);
+    }
+
+}
+
+@keyframes moveCloud {
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(1500%);
+    }
+}
+
+@keyframes hoverBtn{
+    0%{
+        transform: translate(-3px,-3px);
+    }
+    14%{
+        transform: translate(0px,-3px);
+    }
+    28%{
+        transform: translate(3px,-3px);
+    }
+    42%{
+        transform: translate(3px,0px);
+    }
+    57%{
+        transform: translate(3px,3px);
+    }
+    71%{
+        transform: translate(0,3px);
+    }
+    85%{
+        transform: translate(-3px,5px);
+    }
+    100%{
+        transform: translate(-3px,0px);
+    }
+}
+
+@keyframes hoverBtnReverse{
+    0%{
+        transform: translate(3px,3px);
+    }
+    14%{
+        transform: translate(0px,3px);
+    }
+    28%{
+        transform: translate(-3px,3px);
+    }
+    42%{
+        transform: translate(-3px,0px);
+    }
+    57%{
+        transform: translate(-3px,-3px);
+    }
+    71%{
+        transform: translate(0,-3px);
+    }
+    85%{
+        transform: translate(3px,-3px);
+    }
+    100%{
+        transform: translate(3px,0px);
+    }
+}
