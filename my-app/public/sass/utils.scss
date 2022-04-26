@@ -87,3 +87,23 @@ $clr-flash: #F67095;
         transform: translate(3px,0px);
     }
 }
+
+@keyframes openPageContent{
+    from{
+        opacity: 0;
+        transform: translate(0, -50%);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+@keyframes openPageButton{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

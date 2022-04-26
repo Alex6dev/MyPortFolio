@@ -3,21 +3,20 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 h1 {
-  font-family: "Vidaloka", serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(30px, 9vw, 100px);
   margin: 0;
 }
 
 h2 {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Playfair Display", serif;
 }
 
 p {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 @keyframes rotateSimple {
@@ -96,6 +95,24 @@ p {
     transform: translate(3px, 0px);
   }
 }
+@keyframes openPageContent {
+  from {
+    opacity: 0;
+    transform: translate(0, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes openPageButton {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .btn {
   display: flex;
   padding: 1rem;
@@ -104,22 +121,25 @@ p {
   background-color: #F67095;
 }
 
+a {
+  text-decoration: none;
+}
+
 .headerContainer {
   display: flex;
 }
 
 .header h1 {
-  margin: 0.5rem 0 0 2rem;
+  margin: 0 0 0 2rem;
   font-size: 3rem;
-  font-size: 72px;
+  font-size: 60px;
   background: -webkit-linear-gradient(#91CC92, #F2EB8D);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-okplm,
 .headerNav {
-  margin-left: 12%;
+  margin: 0.5rem 0 0 12%;
 }
 
 .headerList {
@@ -167,8 +187,63 @@ okplm,
   animation: 2s hoverBtnReverse infinite;
 }
 
+.headerBtnCurrents {
+  background: linear-gradient(#91CC92, #F2EB8D);
+}
+
 li p {
   font-size: 1.1rem;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 2rem;
+  width: 96.65%;
+  height: 15rem;
+  background-color: rgb(34, 34, 34);
+}
+footer p {
+  color: #F2EB8D;
+}
+
+.containerInfo {
+  width: 30%;
+  height: 100%;
+  display: flex;
+}
+
+.imgFooter {
+  width: 40%;
+  object-fit: cover;
+  border-radius: 5rem;
+}
+
+.containerTextInfo {
+  margin-left: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.containerCopyright {
+  position: absolute;
+  left: 48%;
+  top: 50%;
+}
+
+.containerMeRetrouver {
+  position: absolute;
+  left: 80%;
+  top: 20%;
+}
+
+.fa-github, .fa-linkedin {
+  color: white;
+  font-size: 5rem;
+  margin-left: 1rem;
 }
 
 .JuniorContainer {
@@ -178,27 +253,31 @@ li p {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
 }
 
 .JuniorContainerCloud {
   position: absolute;
+  overflow: hidden;
   width: 100%;
 }
 
 .fa-cloud {
   color: gray;
   font-size: 8rem;
-  animation: moveCloud 20s ease infinite;
+  animation: moveCloud 15s ease infinite;
 }
 
 .CloudFirst {
-  top: 0;
-  left: -20rem;
+  top: 45rem;
+  left: 40rem;
+  width: 66.6%;
 }
 
 .CloudTwo {
-  top: 50rem;
-  left: 100rem;
+  width: 108.3%;
+  top: 2rem;
+  left: -10rem;
 }
 
 .JuniorContainerContent {
@@ -225,6 +304,133 @@ li p {
 .JuniorImg {
   transform: rotate(-5deg);
   animation: plane 5s ease-in-out infinite alternate;
+}
+
+.containerContent {
+  padding: 3%;
+}
+
+.containerFirst {
+  display: flex;
+  animation: openPageContent 1s ease;
+}
+
+.containerImgLeft, .containerImgRight {
+  position: relative;
+  width: 25%;
+}
+
+.elementDeco {
+  position: absolute;
+}
+
+.span1 {
+  background-color: #F2EB8D;
+  top: 10%;
+  left: 0;
+  width: 50px;
+  height: 100px;
+  border-radius: 0 4rem 4rem 0;
+}
+
+.span2 {
+  background-color: #F67095;
+  top: 82%;
+  left: 80%;
+  width: 50px;
+  height: 50px;
+  border-radius: 2rem;
+}
+
+.imgHome {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 0 4rem;
+  min-width: 220px;
+}
+
+.containerText {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 50%;
+}
+.containerText h1 {
+  color: #ADCC91;
+  font-size: 2rem;
+  text-shadow: 1px 1px 3px #F2EB8D;
+}
+.containerText h2 {
+  color: #F2EB8D;
+  font-size: 5rem;
+  padding: 0 2rem 0 2rem;
+  text-shadow: 1px 1px 3px #91CC92;
+}
+
+.imgRight {
+  margin-top: 4rem;
+}
+
+.span3 {
+  background-color: #91CC92;
+  top: 90%;
+  left: 10%;
+  width: 75px;
+  height: 75px;
+  border-radius: 0 2rem 2rem 2rem;
+}
+.span4 {
+  background-color: #ADCC91;
+  top: -5%;
+  left: 80%;
+  width: 50px;
+  height: 50px;
+  border-radius: 2rem;
+}
+
+.containerSecond {
+  margin-top: 3rem;
+  opacity: 0;
+  animation: openPageButton 1s ease 1s both;
+}
+.containerSecond ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.containerSecond a {
+  position: relative;
+  z-index: 1;
+  padding: 0 1rem;
+  border: solid 1px #F67095;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px rgb(246, 112, 150);
+  background-color: white;
+}
+.containerSecond a:hover::after {
+  opacity: 1;
+}
+.containerSecond a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 2rem;
+  background-color: #F67095;
+  box-shadow: 0 0 5px rgba(246, 112, 150, 0.5);
+  transition: 1s opacity;
+  border: #F67095;
+}
+.containerSecond a p {
+  color: black;
+}
+.containerSecond li {
+  list-style-type: none;
 }
 
 /*# sourceMappingURL=App.css.map */

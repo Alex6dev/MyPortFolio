@@ -1,18 +1,20 @@
 import './App.css';
-import { Route, Router, Routes } from 'react-router';
-import { HomePages } from './pages/HomePage';
-import { APropos } from './pages/APropos';
-import { PortFolios } from './pages/PortFolio';
-import { Contact } from './pages/Contact';
+import { Route, Routes } from 'react-router';
+import { HomePage } from './pages/HomePage';
+import { MoiPage } from './pages/MoiPage';
+import { CompetencesPage } from './pages/CompetencesPage';
+import { PortFolioPage } from './pages/PortFolioPage';
+import { ContactPage } from './pages/ContactPage';
 
 function App() {
   return (
     
       <Routes>      
-        <Route path='/' element={<HomePages/>}/>
-        <Route path='/' element={<APropos/>}/>
-        <Route path='/' element={<PortFolios/>}/>
-        <Route path='/' element={<Contact/>}/>    
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/moi' element={<MoiPage/>}/>
+        <Route path='/competences' element={<CompetencesPage/>}/>
+        <Route path='/portfolio' element={<PortFolioPage/>}/>
+        <Route path='/contact' element={<ContactPage/>}/>    
       </Routes>
     
   );

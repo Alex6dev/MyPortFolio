@@ -1,17 +1,21 @@
 import { useSelector } from "react-redux";
-import { HomePage } from "../components/HomePage";
+import { Header } from "../components/Header";
+import { HomeComponent } from "../components/HomeComponent";
 import { JuniorFirstPage } from "../components/JuniorFirstPage";
 
-export const HomePages=()=>{
+export const HomePage=()=>{
     const userFirstVisit= useSelector((state)=>state.user.firstVisit)
     
-    if(/*userFirstVisit*/ false){
+    if(/*userFirstVisit*/false){
         return(
             <JuniorFirstPage/>
         )
     }else{
         return(
-            <HomePage/>
+            <>
+            <Header props={"home"}/>
+            <HomeComponent/>
+            </>
         )
     }
 
