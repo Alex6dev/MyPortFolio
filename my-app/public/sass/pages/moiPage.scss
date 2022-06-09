@@ -1,0 +1,119 @@
+.containerMoiContent{
+    display: flex;
+    width: 100%;
+    animation: openPageContent 1s ease;
+
+    & section{
+        width: 50%;
+        position: relative;
+        & h1 {
+            color: transparent;
+            font-size: 0px;
+        }
+        & h1 span {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            font-size: clamp(20px, 8vw, 120px);
+        }
+        & h1 span::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+        }
+        & h1:nth-child(1) {
+            animation: txt-appearance 0s  forwards 2s;
+        }
+        & h1:nth-child(2) {
+            animation: txt-appearance 0s forwards 2.25s;
+        }
+        & h1:nth-child(1) span::after {
+            background: $clr-primaire;
+            animation: slide-in 0.75s ease-out forwards 1s,
+            slide-out 0.75s ease-out forwards 2s;
+        }
+        & h1:nth-child(2) span::after {
+            background: $clr-tertiaire;
+            animation: slide-in 0.75s  ease-out forwards 1.3s,
+            slide-out 0.75s ease-out forwards 2.3s;
+        }
+        
+        & p{
+            opacity: 0;            
+            animation: openPageContent 1s ease 3s both;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            &:nth-of-type(5){
+                margin-bottom: 5rem;
+            }
+        }
+        & .fa-solid{
+            position: absolute;
+            font-size: 3rem;
+        }
+        & .fa-tractor{
+            top: 55%;
+            left:-10%;
+            color:$clr-primaire;
+            transform: rotate(-5deg);
+        }
+        & .fa-carrot{
+            top: 10%;
+            right: 5%;
+            color:orange;    
+        }
+        & .fa-seedling{
+            bottom: 0;
+            right: 5%;
+            color:$clr-primaire;    
+        }
+        & .fa-car-side{
+            bottom: 25%;
+            left: -30%;
+            color:rgb(97, 97, 255);    
+        }
+        & .fa-laptop-code{
+            bottom: 3%;
+            left: -10%;
+            color:$clr-flash;    
+        }
+
+    }
+}
+.imgMoiComponent{
+    width: 80%;
+    margin: 0 10% 0 10%;
+    border-radius: 0 5rem;
+}
+.containerMoiImgLeft{
+    width: 20%;
+}
+
+.containerMoiImgRight{
+    width: 30%;
+    padding: 2rem 0 0 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgMoiMarché{
+    width: 80%;
+}
+.imgMoiMarchéTop{
+    border-radius: 0 5rem;
+    transform: rotate(5deg);
+
+}
+.imgMoiMarchéBottom{
+    margin: 5rem 0 2rem 0;
+    border-radius:  5rem 0 ;
+    transform: rotate(-5deg);
+
+}
+

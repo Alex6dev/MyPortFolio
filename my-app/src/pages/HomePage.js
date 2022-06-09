@@ -6,7 +6,7 @@ import { JuniorFirstPage } from "../components/JuniorFirstPage";
 export const HomePage=()=>{
     const userFirstVisit= useSelector((state)=>state.user.firstVisit)
     
-    if(/*userFirstVisit*/false){
+    if(userFirstVisit){
         return(
             <JuniorFirstPage/>
         )

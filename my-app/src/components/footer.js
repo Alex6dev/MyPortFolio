@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import imgFooter from "../assets/myFooter.jpg"
 export const Footer=()=>{
     
@@ -8,7 +7,7 @@ export const Footer=()=>{
                 <img src={imgFooter} alt="photo d'Alexandre Six" className="imgFooter"/>
                 <div className="containerTextInfo">
                     <p>
-                        Alexandre Six - <span>developpeur Front-end</span>
+                        Alexandre Six - <i>developpeur Front-end</i>
                     </p>
                     <p>
                         59280 Armentières

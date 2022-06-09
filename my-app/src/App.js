@@ -7,6 +7,8 @@ import { PortFolioPage } from './pages/PortFolioPage';
 import { ContactPage } from './pages/ContactPage';
 
 function App() {
+  console.log("toto")
+
   return (
     
       <Routes>      
